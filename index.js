@@ -65,3 +65,5 @@ module.exports = function (filePath, options) {
     }
     return uploadFile(filePath, options);
 };
+
+module.exports.host = C.qiniu.cdn_host;
