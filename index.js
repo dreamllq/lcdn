@@ -45,18 +45,23 @@ var uploadMedia = function (filePath) {
     var extname = path.extname(filePath).slice(1);
 };
 
-var uploadFile = function (filePath) {
-    var arr = filePath.split("/");
-    var name = arr[arr.length - 1];
-    var key = moment().format("YYYY-MM-DD") + "/" + uuid.v1() + "/" + name;
+var uploadFile = function (filePath, options) {
+    if (options.name) {
+        var key = options.name;
+    } else {
+        var arr = filePath.split("/");
+        var name = arr[arr.length - 1];
+        var key = moment().format("YYYY-MM-DD") + "/" + uuid.v1() + "/" + name;
+    }
     return uploadFileDo(key, filePath);
 };
 
-module.exports = function (filePath) {
+module.exports = function (filePath, options) {
+    options = options || {};
     var tuchuang = ['jpg', 'png', 'gif', 'jpeg'];
     var extname = path.extname(filePath).slice(1);
     if (tuchuang.indexOf(extname) > -1) {
-        return uploadFile(filePath);
+        return uploadFile(filePath, options);
     }
-    return uploadFile(filePath);
+    return uploadFile(filePath, options);
 };
