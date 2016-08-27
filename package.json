@@ -22,6 +22,8 @@
   "homepage": "https://github.com/dreamllq/lcdn#readme",
   "dependencies": {
     "qiniu": "^6.1.11",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "uuid": "^2.0.2",
+    "moment": "^2.14.1"
   }
 }
