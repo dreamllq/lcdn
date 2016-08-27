@@ -1,0 +1,27 @@
+{
+  "name": "lcdn",
+  "version": "0.0.2",
+  "description": "upload source to qiniu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreamllq/lcdn.git"
+  },
+  "keywords": [
+    "qiniu",
+    "cdn"
+  ],
+  "author": "lvliqi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreamllq/lcdn/issues"
+  },
+  "homepage": "https://github.com/dreamllq/lcdn#readme",
+  "dependencies": {
+    "qiniu": "^6.1.11",
+    "q": "^1.4.1"
+  }
+}
